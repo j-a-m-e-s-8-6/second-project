@@ -1,4 +1,4 @@
-# A homemade [CRIB](null "ШПАРГАЛКА") to GIT bash CLI/GitHUB GUI `🤖n00b edition`
+# A homemade [CRIB](null "ШПАРГАЛКА") to GIT bash CLI/GitHUB GUI `🤖n00b ~РУСЯЗ~ edition` 
 >+ 1) (листок с подсказками) crib; trot, pony амер.
 >+ 2) преимущественно неодобр. (написанный текст устного выступления) written notes pl; prepared text
 
@@ -20,7 +20,7 @@ You miserable git!
 ---
 
 ### ! DOWNLOAD 💻 [CLI Git BASH and GIT-GUI](https://git-scm.com/download/win "official download site") for Win+ =  [_mintty_ GNU GPLv3](http://mintty.github.io)  
-Аналоги GitBash : Mercurial, Subversion, BitBucket, SourceTree, GitLab, etc
+GitBash совместим с : GitHub, Mercurial, Subversion, BitBucket, SourceTree, GitLab, etc
 
 ---
 
@@ -30,7 +30,7 @@ You miserable git!
 $ pwd # print working directory
 /c/Users/%USERNAME%/dev/git
 ```
-* CD 🟰 __change directory__
+* CD 🟰 __CHANGE directory__
 ```bash
 $ cd ~ # change directory to HOME directory {DIR}  
 $ cd "Фотографии с дня рождения" # если пробелы в папке ⚠️  
@@ -38,7 +38,7 @@ $ cd github/open-source-project # переходим через нескольк
 $ cd . # переходим в текущую директорию  
 $ cd .. # переходим на уровень выше  
 ```
-* LS 🟰 __list__
+* LS 🟰 __LIST__
 ```bash
 $ ls # list directory contents  
 $ ls # вывели список файлов  
@@ -52,12 +52,12 @@ $ ls -a # вывели список, в котором отображаются 
 file.txt  
 photo.png  
 ```
-* TOUCH 🟰 __create__
+* TOUCH 🟰 __CREATE__
 ```bash
 $ touch my-new-file.txt # создали файл my-new-file.txt
 $ touch ../../file.txt  # на две папки выше  
 ```
-* MKDIR 🟰 __make directory__
+* MKDIR 🟰 __MAKE DIRECTORY__
 ```bash
 $ mkdir new-dir # make directory = создали директорию new-dir
 $ mkdir -p dir1/dir-inside/dir-deeper-inside  
@@ -68,29 +68,63 @@ $ mkdir -p dir1/dir-inside/dir-deeper-inside
 $ cp что_копируем куда_копируем  
 $ cp index.html src/  
 # скопировали index.html в папку src  
-
 $ cp что_копируем что_копируем что_копируем куда_копируем  
 $ cp index.html style.css script.js src/  
 # скопировали три файла (index.html, style.css и script.js) в папку src  
 ```
-MV 🟰 __MOVE__
+* MV 🟰 __MOVE__
 ```bash
 $ mv table.csv ./very-important-files
 # сначала указываем имя файла, который хотим переместить, потом путь — куда перемещаем 
-
 $ cd very-important-files
 $ ls
 table.csv 
 # перешли в папку very-important-files и проверили, что всё сработало
 ```
+* CAT 🟰 __concatenate__
+```bash
+$ cat myfile.txt # распечатали содержимое файла myfile.txt
+file-content-1
+file-content-2
+```
+* RM RMDIR 🟰 __REMOVE__
+```bash
+$ rm example.txt # удалили файл example.txt из текущей папки
+$ rmdir images # команда удалит папку images из текущей директории, если папка images пуста
+$ rm -r images # удалили папку images со всем её содержимым из текущей директории
+```
+* && 🟰 __AND__ __AND__  
+```bash
+$ mkdir second-project && cd second-project && touch index.html style.css
+# создаём папку second-project,
+# переходим в папку second-project
+# и создаём в ней два файла: index.html и style.css
+```
+* `TAB` 🟰 auto complete
 
 ```bash
+$ cd /Users/ # перешли в папку Users
+$ cd U[Tab] # ввели первую букву имени пользователя и нажали Tab
+# имя папки Username подставится автоматически
+$ pwd # теперь проверим, где мы сейчас находимся 
+/Users/Username # мы в папке Username!
 
+$ cd ~/[Tab] # вывели список директорий, чтобы понять, куда переходить
+Applications/  Downloads/     Library/       Parallels/     Public/        diagrams/      memes/         python/
+Desktop/       Dropbox/       Movies/        Pictures/      bin/           docs/          papers/        tmp/
+Documents/     Exercism/      Music/         Postman/       books/         go/            projects/
+
+$ cd ~/[Tab] 
+zsh: do you wish to see all 426 possibilities (429 lines)? # точно хотите увидеть все 426 варианта (429 линий)?
 ```
 
 
-### * _examples :_  
+
+* ###  _examples :_  
 ```bash
+$ git version 
+git version 2.41.0.windows.3
+
 $ pwd
 /projects # сейчас мы здесь
 $ cd github # переходим в папку github
@@ -114,15 +148,39 @@ $ pwd # посмотрели, где мы
 /Users/%USER_NAME%
 $ ls # файл скопирован, ура!
 data.txt
-<...>
 
+$ cd c:/ # переместились в корневую директорию
+$ ls
+Documents and Settings/     Windows/
+Program Files/              Users/
+Program Files (x86)/
+# содержимое корневой директории Windows
 
 
 ```
 
+## Работа с файлом настройки `.gitconfig`
+Сейчас вы работаете в одиночку, но в дальнейшем вам может понадобиться использовать Git в команде. Чтобы участникам проекта было понятно, кто и какие изменения вносил, нужно представиться и указать имя пользователя и адрес электронной почты.
 
+```bash
+$ git config --global user.name "User Namovich" 
+# имя или ник нужно написать латиницей и в кавычках
+
+$ git config --global user.email username@yandex.ru
+# здесь нужно указать свой настоящий email
+
+$ cat ~/.gitconfig
+$ git config --list
+user.name=Username
+user.email=username@yandex.ru
+```
+
+
+
+```bash
 $ cd ~/dev/first-project # перешли в нужную папку  
 $ git init # создали репозиторий  
 
 $ cd <папка с репозиторием> # перешли в папку  
 $ rm -rf .git # удалили подпапку .git  
+```
