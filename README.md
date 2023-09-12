@@ -1,4 +1,4 @@
-# A homemade [CRIB](null "ШПАРГАЛКА") to GIT bash CLI/GitHUB GUI `🤖n00b ~РУСЯЗ~ edition` 
+# A homemade [<span style="color:blue"><abbr title="ШПАРГАЛКА">CRIB</abbr></span>]("ШПАРГАЛКА") to GIT bash CLI/GitHUB GUI `🤖n00b ~РУСЯЗ~ edition` 
 >+ 1) (листок с подсказками) crib; trot, pony амер.
 >+ 2) преимущественно неодобр. (написанный текст устного выступления) written notes pl; prepared text
 
